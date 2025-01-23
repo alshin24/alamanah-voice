@@ -73,7 +73,7 @@ export default function FormBuilder() {
                         className="font-bold"
                         disabled={isLoading}
                     >
-                        { isLoading ? <Loader2/> : <Send /> }
+                        { isLoading ? <Loader2 className="animate-spin"/> : <Send /> }
                          
                     </Button>
                 </div>
