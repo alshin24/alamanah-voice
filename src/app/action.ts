@@ -12,12 +12,12 @@ export async function submitForm(data: unknown) {
         throw new Error('Validation failed');
     }
 
-    const { message } = parsedData.data;
+    const { message, name } = parsedData.data;
 
     const { data: messageData, error } = await supabase
         .from('messages')
         .insert([
-            { message }
+            { message, name }
         ])
         .select()
 
@@ -25,7 +25,5 @@ export async function submitForm(data: unknown) {
     if (error) {
         console.log("error : ", error.message)
     }
-
-
 
 }

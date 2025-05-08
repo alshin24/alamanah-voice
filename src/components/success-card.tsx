@@ -26,7 +26,7 @@ export default function SuccessCard() {
                 </div>
             </CardContent>
             <CardFooter>
-                    <Button asChild variant="neu" className="w-full mt-3">
+                    <Button asChild variant="neu" className="w-full mt-3 font-bold">
                         <Link href="/" className="font-bold">
                             Kirim Pesan Lagi
                         </Link>
