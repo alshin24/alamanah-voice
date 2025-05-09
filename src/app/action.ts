@@ -12,7 +12,7 @@ export async function submitForm(data: unknown) {
         throw new Error('Validation failed');
     }
 
-    const { message, name } = parsedData;
+    const { message, name } = parsedData.data;
 
     const { data: messageData, error } = await supabase
         .from('messages')
