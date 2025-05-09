@@ -6,13 +6,13 @@ import { formSchema } from "@/zod/schema";
 
 export async function submitForm(data: unknown) {
     const supabase = await createClient()
-    const parsedData = formSchema.safeParse(data);
+    // const parsedData = formSchema.safeParse(data);
 
-    if (!parsedData.success) {
-        throw new Error('Validation failed');
-    }
+    // if (!parsedData.success) {
+    //     throw new Error('Validation failed');
+    // }
 
-    const { message, name } = parsedData.data;
+    const { message, name } = data;
 
     const { data: messageData, error } = await supabase
         .from('messages')
